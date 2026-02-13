@@ -1,7 +1,21 @@
+import {BrowserRouter , Routes ,Route} from 'react-router-dom'
+import Home from './pages/Home';
+import Login from './pages/Login';
+import {Toaster} from 'react-hot-toast'
+
 const App = () => {
   return (
     <>
-      <h1 className="text-3xl text-red-500 font-bold underline">Hello world!</h1>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        
+
+      </Routes>
+      <Toaster/>
+      
+      </BrowserRouter>
     </>
   );
 }
